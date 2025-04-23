@@ -1,9 +1,22 @@
 #!/usr/bin/env python3
 # -*-coding: utf-8-*-
 
-# Reference: https://www.evm.codes/?fork=cancun
+"""
+config.py
 
-# opcode, name, operands, pops, pushs, gas
+This module defines common EVM opcodes and their properties.
+
+`opcode_config` is a list of dictionaries, each representing an opcode's:
+  - `opcode`: Hexadecimal representation (e.g., 0x00, 0x01)
+  - `name`: Opcode name (e.g., STOP, ADD)
+  - `operands`: Number of operands
+  - `pops`: Number of items popped from stack
+  - `pushs`: Number of items pushed to stack
+  - `gas`: Gas used by opcode
+
+Ref: httpshttps://www.evm.codes/?fork=cancun
+"""
+
 
 instruction_table = [
     (0x00, "STOP",           0,  0,  0,     0),
